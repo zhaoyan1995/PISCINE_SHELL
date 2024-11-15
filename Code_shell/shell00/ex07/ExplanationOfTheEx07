@@ -1,0 +1,18 @@
+we create a file named "a"
+we type some texte in this file.
+we save it and quit this file.
+we use the commande line below:
+diff a b >sw.diff
+patch a sw.diff -o b
+it shows: "patching file b(read from a)
+
+In the patch command, the -o option spedifies an output file where the patched content should be written. This option is useful if you want to apply changes from a patch files to a source file but save the modified resulta to a new file, leaving the original file unchanged
+
+syntax:
+patch proginal_file  patch file -o output_file 
+
+In this example, a is the original file,
+sw.diff is the patch file
+-o b means the result (patched content) will be saved to a new file b without modifying the original file a
+
+This is especially useful when you want to review changes without altering the original file directly. 

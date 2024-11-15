@@ -1,0 +1,10 @@
+answer 1 :
+ls -l | sed -n '1~2p'
+Explanation : sed -n we only print the matched line 
+1~2 means that from the spot of the 1st line, we need to skip 2 lines to match the next pattern 
+p => print 
+
+answer2: 
+ls -l | sed 'n;d'
+
+

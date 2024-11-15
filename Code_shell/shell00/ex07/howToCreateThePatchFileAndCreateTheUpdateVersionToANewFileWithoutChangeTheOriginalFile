@@ -1,0 +1,26 @@
+An original file called file1.txt
+Hello, World!
+This is the original file.
+
+A patch file called update.patch that contains changes you want to apply to file1.txt
+2c2
+< This is the original file.
+---
+> This is the modified file.
+
+This update.patch file indicates a change in line2 of file 1.txt
+
+Applying the Patch with -o
+
+If you want to apply update.patch to file1.txt but sae the result to a new file called file2.txt, without modifying file1.txt directly, you can use 
+
+patch file1.txt update.patch -o file2.txt
+After running this command:
+file1.txt remains unchanged
+file2.txt will be created with the updated content:
+Hello, World!
+This is the modified file.
+
+This example shows how the -o option lets you keep the original file intact while saving the patchedd result to a different file.
+ 
+

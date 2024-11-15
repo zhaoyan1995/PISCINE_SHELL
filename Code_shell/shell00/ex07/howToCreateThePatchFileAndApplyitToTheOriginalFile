@@ -1,0 +1,23 @@
+Suppose you have an original file called file.txt with the following content:
+Hello,World !
+This is the original file.
+
+You also have a modified file called file_modified.txt with this ocntent:
+Hello, World !
+This is the modified file.
+
+We want to create a patch file to recored the difference between file.txt and file_modified.txt, and then apply that patch to file.txt to update its content.
+
+Step 1, creat the Patch File
+diff -u file.txt file_modified.txt > update.patch
+
+This update.patch file captures the change needed to turn file.txt into file_modified.txt
+
+Step2 Apply the Patch
+Now let's apply update.patch to file.txt:
+patch file.txt < update.patch
+After running thes command, file.txt will be updated with the changes from update.patch
+
+The content of file.txt is now :
+Hello, world !
+This is the modified file. 
